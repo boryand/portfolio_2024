@@ -1,0 +1,64 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.navbar {
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_1 {
+  color: #fffdd0;
+  display: flex;
+  list-style-type: none;
+  margin-right: 3%;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+}
+
+.list_item {
+  margin-right: 10%;
+  font-size: 1.2rem;
+}
+
+.partOne {
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hi {
+  font-size: 5rem;
+  margin-left: 5%;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.my_mission {
+  margin-left: 5%;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.mail_button {
+  padding: 15px;
+  margin-left: 5%;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: black;
+  color: #fffdd0;
+}
+
+.mail_button:hover {
+  background-color: #fffdd0;
+  color: black;
+  border: 2px solid black;
+}
