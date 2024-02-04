@@ -1,64 +1,115 @@
-.main {
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  background-color: #420fe6;
 }
 
 .navbar {
   height: auto;
-  background-color: black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .navbar_1 {
-  color: #fffdd0;
   display: flex;
   list-style-type: none;
-  margin-right: 3%;
-  align-items: center;
+  margin-right: 45%;
+  justify-self: end;
 }
 
 .logo {
   height: 80px;
+  justify-self: start;
 }
 
 .list_item {
   margin-right: 10%;
-  font-size: 1.2rem;
+  margin-top: 5%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Figtree", sans-serif;
+  color: white;
 }
 
 .partOne {
-  margin-top: 7%;
   display: flex;
+  margin-top: 10%;
   justify-content: space-between;
 }
 
 .hi {
   font-size: 5rem;
   margin-left: 5%;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
+  color: white;
 }
 
 .my_mission {
   margin-left: 5%;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.2rem;
   line-height: 30px;
+  font-size: 1.3rem;
+  color: #c39dff;
+  font-family: "Figtree", sans-serif;
+}
+
+.me {
+  border-radius: 50%;
+  height: 400px;
+  margin-right: 3%;
 }
 
 .mail_button {
   padding: 15px;
   margin-left: 5%;
+  margin-top: 3%;
   font-size: 1rem;
-  border-radius: 12px;
+  width: 290px;
+  background-color: transparent;
   cursor: pointer;
-  background-color: black;
-  color: #fffdd0;
+  font-weight: bold;
+  border: 3px solid #bba4ff;
+  color: white;
 }
 
-.mail_button:hover {
-  background-color: #fffdd0;
-  color: black;
-  border: 2px solid black;
+.mail:hover {
+  transform: scale(1.1);
+  transition: transform 3s;
+  animation: infinite;
+}
+
+.aboutme {
+  margin: 0 auto;
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.who_am_i {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 5%;
+  color: #c39dff;
+  line-height: 30px;
+  /* From https://css.glass */
+}
+
+.aboutme_2 {
+  color: white;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 4rem;
 }
