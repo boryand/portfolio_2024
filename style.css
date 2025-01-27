@@ -6,7 +6,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(8,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23CBFFE3'/%3E%3Cstop offset='1' stop-color='%23FFDDCD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='26' height='26' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='13' cy='13' r='13'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.18'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  font-family: "Figtree", sans-serif;
 }
 
 .navbar {
@@ -14,187 +17,224 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
-  position: fixed;
-  width: 100%;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.09);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem 2rem;
 }
 
 .navbar_1 {
   display: flex;
   list-style-type: none;
-  margin-right: 45%;
-  justify-self: end;
+  margin-right: 5%;
 }
 
 .logo {
-  height: 80px;
+  height: 60px;
   justify-self: start;
 }
 
 .list_item {
-  margin-right: 10%;
-  margin-top: 5%;
-  font-size: 1.1rem;
+  margin-right: 2rem;
+  font-size: 1.3rem;
   cursor: pointer;
   font-weight: bold;
   font-family: "Figtree", sans-serif;
   color: #777777;
+  transition: color 0.3s;
+}
+.list_item:hover {
+  color: #c58fa8;
 }
 
 .partOne {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 10%;
-  justify-content: space-between;
 }
 
 .hi {
-  font-size: 5rem;
-  margin-left: 5%;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 10%;
   font-family: "Ubuntu Mono", monospace;
-  color: #2677f8;
+  color: #2c3e50;
 }
 
 .my_mission {
-  margin-left: 5%;
-  line-height: 30px;
-  font-size: 1.3rem;
-  color: #777777;
-  font-family: "Figtree", sans-serif;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 10%;
+  max-width: 800px;
 }
 
 .me {
   border-radius: 50%;
-  height: 400px;
-  margin-right: 3%;
-}
-
-.mail_button {
-  padding: 15px;
-  margin-left: 5%;
-  margin-top: 3%;
-  font-size: 1rem;
-  width: 290px;
-  background-color: #2677f8;
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-}
-
-.mail:hover {
-  transform: scale(1.1);
-  transition: transform 3s;
-  animation: infinite;
+  height: 300px;
+  width: 300px;
+  margin: 2rem auto;
 }
 
 .aboutme {
-  margin: 0 auto;
-  margin-top: 8%;
+  margin: 5rem auto;
   display: flex;
-  justify-content: space-between;
-}
-
-.who_am_i {
-  font-family: "Nanum Gothic Coding", monospace;
-  font-size: 1.2rem;
-  text-align: left;
-  margin-left: 5%;
-  color: #777777;
-  line-height: 30px;
-  width: 89%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .aboutme_2 {
-  color: #2677f8;
   font-family: "Ubuntu Mono", monospace;
-  font-size: 4rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
 }
 
-.aboutme_3 {
-  color: #2677f8;
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 4rem;
-  margin-left: 5%;
+.tools_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #2c3e50;
 }
-
-.aboutme_4 {
-  color: #2677f8;
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 4rem;
-  margin-left: 5%;
-  margin-top: 8%;
+.tools_container p {
+  font-size: 1rem;
 }
 
 .tools {
-  color: #2677f8;
+  color: #c58fa8;
   font-weight: bold;
 }
 
 .projects {
-  margin-top: 8%;
-}
-
-.project {
-  display: flex;
-  justify-content: space-around;
-}
-
-.project_1 {
-  width: 400px;
-  margin-top: 2%;
+  margin-top: 5rem;
   text-align: center;
 }
 
-.title {
-  color: #5356ff;
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.project_1 {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+.project_1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.project_1 .title {
+  color: #c58fa8;
   font-family: "Ubuntu Mono", monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
-
-.text {
-  color: #777777;
+.project_1 .text {
+  color: #2c3e50;
   font-family: "Nanum Gothic Coding", monospace;
-  font-size: 1.2rem;
-  line-height: 25px;
-}
-
-.project_button {
-  padding: 15px;
-  margin-top: 1%;
   font-size: 1rem;
-  width: 200px;
-  background-color: #5356ff;
-  cursor: pointer;
-  font-weight: bold;
-  color: #777777;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #c58fa8;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #b46d8e;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 5rem auto;
 }
 
 .icon {
   align-self: center;
+  height: 10px;
 }
 
 .contact_1 {
   color: #777777;
   font-size: 1.4rem;
   font-family: "Nanum Gothic Coding", monospace;
-  line-height: 3rem;
+  line-height: 2rem;
+  text-align: center;
 }
 
-.contact_1:hover {
-  cursor: pointer;
-  color: white;
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partOne {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Space between text and image */
+  margin-top: 10%;
+  padding: 0 10%;
+  gap: 2rem; /* Adds spacing between the image and text */
+}
+
+.my_mission {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  width: 90%; /* Adjust width for proper spacing */
+  max-width: 600px;
+}
+
+.me {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s; /* Smooth hover effect */
+}
+.me:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow on hover */
+}
+
+.me {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 16px rgba(197, 143, 168, 0.4);
+  animation: float 3s ease-in-out infinite;
+  transition: box-shadow 0.3s;
+}
+.me:hover {
+  box-shadow: 0 12px 24px rgba(197, 143, 168, 0.6);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
